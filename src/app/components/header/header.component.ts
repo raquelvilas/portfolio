@@ -1,3 +1,4 @@
+import { ButtonSecondaryComponent } from './../button-secondary/button-secondary.component';
 import { Component } from '@angular/core';
 
 @Component({

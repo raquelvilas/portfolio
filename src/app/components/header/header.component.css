@@ -1,28 +1,96 @@
+/* Menu container*/
 header {
     display: flex;
-    align-items: center;
-    background-size: cover;
-    background-color: #F6F1F9;
+    justify-content: center;
+    background-color: #F1E3F9;
+    width: 100%;
   }
 
+/* Menu */
 .menu{
     display: flex;
-    margin: 32px auto 32px;
-
-    max-width: 960px;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;   /*vertical alignment */
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 0;
+    min-width: 288px;
 }
 
-svg.linkedin-logo{
+li{
+    list-style-type: none;
+}
+
+ /* Menu itens */
+svg.linkedin-logo {
     height: 50px;
     width: auto;
+    cursor: pointer;
 }
 
-svg.linkedin-logo:hover{
-    height: 55px;
-    width: auto;
+.menu h4{
+    text-align: center;
+    cursor: pointer;
+}
+
+svg.linkedin-logo:hover,
+.menu h4:hover:hover {
+    transform: scale(1.1);
+    transition: 0.7s all;
     opacity: 0.8;
+}
+
+/* Responsive layouts */
+
+/* Extra-small */
+@media screen and (max-width: 599px) {
+    .menu{
+        width: 100%;
+        margin: 16px;
+    }
+
+    svg.linkedin-logo {
+        display: none;
+    }
+
+    .menu h4{
+        font-size: medium;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .menu button{
+        margin-right:0;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+}
+
+/* Small */
+@media screen and (min-width: 600px) and (max-width: 904px) {
+    .menu{
+        width: 100%;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+
+/* Medium */
+@media screen and (min-width: 905px) and (max-width: 1239px) {
+    .menu{
+        width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Large */
+@media screen and (min-width: 1240px) and (max-width: 2300px) {
+    .menu{
+        width: 100%;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
 }
