@@ -34,6 +34,13 @@ svg.linkedin-logo {
     cursor: pointer;
 }
 
+md-outlined-button {
+    --md-outlined-button-container-shape: 24px;
+    --md-outlined-button-label-text-font:'Red Hat Display';
+    --md-sys-color-primary: #8231AA;
+    --md-sys-color-outline: #8231AA;
+  }
+
 svg.linkedin-logo:hover,
 .menu h4:hover:hover {
     transform: scale(1.1);
@@ -58,12 +65,6 @@ svg.linkedin-logo:hover,
         font-size: medium;
         text-align: left;
         margin-left: 0;
-    }
-
-    .menu button{
-        margin-right:0;
-        padding-left: 8px;
-        padding-right: 8px;
     }
 
 }
