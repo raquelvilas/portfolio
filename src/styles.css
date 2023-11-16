@@ -3,99 +3,108 @@
 @import '~normalize.css';
 
 :host {
-    font-family: "Red Hat Display", "Noto Sans", "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #333;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;   /* let fonts appear as with a good resolution */
+    -moz-osx-font-smoothing: grayscale;    /* let fonts appear as with a good resolution for mac*/
   }
+
+:root{
+
+/* Reference tokens */
+
+    /* Palette */
+    --md-ref-palette-primary40: #8231AA;
+    --md-ref-palette-primary90: #F1E3F9;
+    --md-ref-palette-error40: #B3261E;
+    --md-ref-palette-black: #240A31;
+    --md-ref-palette-neutral0: #240A31;
+    --md-ref-palette-neutral40: #504C52;
+    --md-ref-palette-neutral100: #FEFEFE;
+    --md-ref-palette-white: #FEFEFE;
+
+    /* Typeface */
+    --md-ref-typeface-brand: 'Red Hat Display', Helvetica, Arial, sans-serif,-apple-system;
+    --md-ref-typeface-plain: 'Noto Sans','Noto Serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --md-ref-typeface-weight-bold: 700;
+    --md-ref-typeface-weight-medium: 500;
+    --md-ref-typeface-weight-regular: 400;
+
+
+/* System tokens */
+    /* Color */
+    --md-sys-color-background:var(--md-ref-palette-white);
+    --md-sys-color-error: var(--md-ref-palette-error40);
+    --md-sys-color-outline: var(--md-ref-palette-primary40);
+    --md-sys-color-primary: var(--md-ref-palette-primary40);
+    --md-sys-color-shadow: ;
+    --md-sys-color-surface: var(--md-ref-palette-neutral0);
+    --md-sys-color-surface-bright: ;
+    --md-sys-color-surface-container: ;
+    --md-sys-color-surface-container-high: ;
+    --md-sys-color-surface-container-highest: ;
+    --md-sys-color-surface-container-low: ;
+    --md-sys-color-surface-container-lowest: ;
+    --md-sys-color-surface-dim: ;
+    --md-sys-color-surface-tint: ;
+    --md-sys-color-surface-variant: ;
+
+    /* Typescale */
+    --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
+    --md-sys-typescale-body-large-line-height: 24px;
+    --md-sys-typescale-body-large-size: 1.33rem;
+    --md-sys-typescale-body-large-weight: var(--md-ref-typeface-weight-regular);
+    --md-sys-typescale-body-medium-font: var(--md-ref-typeface-plain);
+    --md-sys-typescale-body-medium-line-height: 20px;
+    --md-sys-typescale-body-medium-size: 1rem;
+    --md-sys-typescale-body-medium-weight: var(--md-ref-typeface-weight-regular);
+    --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
+    --md-sys-typescale-body-small-line-height: 16px;
+    --md-sys-typescale-body-small-size: 0.75rem;
+    --md-sys-typescale-body-small-weight: var(--md-ref-typeface-weight-regular);
+    --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-display-large-line-height: 64px;
+    --md-sys-typescale-display-large-size: 4.21rem;
+    --md-sys-typescale-display-large-weight: var(--md-ref-typeface-weight-bold);
+    --md-sys-typescale-display-medium-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-display-medium-line-height: 52px;
+    --md-sys-typescale-display-medium-size: 3.16rem;
+    --md-sys-typescale-display-medium-weight: var(--md-ref-typeface-weight-bold);
+    --md-sys-typescale-display-small-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-display-small-line-height: 44px;
+    --md-sys-typescale-display-small-size: 2.37rem;
+    --md-sys-typescale-display-small-weight: var(--md-ref-typeface-weight-bold);
+    --md-sys-typescale-headline-large-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-headline-large-line-height: 40px;
+    --md-sys-typescale-headline-large-size: 1.78rem;
+    --md-sys-typescale-headline-large-weight: var(--md-ref-typeface-weight-medium);
+    --md-sys-typescale-headline-medium-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-headline-medium-line-height: 36px;
+    --md-sys-typescale-headline-medium-size: 1.33rem;
+    --md-sys-typescale-headline-medium-weight: var(--md-ref-typeface-weight-medium);
+    --md-sys-typescale-headline-small-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-headline-small-line-height: 32px;
+    --md-sys-typescale-headline-small-size: 1rem;
+    --md-sys-typescale-headline-small-weight: var(--md-ref-typeface-weight-medium);
+    --md-sys-typescale-label-large-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-label-large-line-height: 20px;
+    --md-sys-typescale-label-large-size: 1.77rem;
+    --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-bold);
+    --md-sys-typescale-label-large-weight-prominent: var(--md-ref-typeface-weight-medium);
+    --md-sys-typescale-label-medium-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-label-medium-line-height: 16px;
+    --md-sys-typescale-label-medium-size: 1.33rem;
+    --md-sys-typescale-label-medium-weight: var(--md-ref-typeface-weight-bold);
+    --md-sys-typescale-label-medium-weight-prominent: var(--md-ref-typeface-weight-medium);
+    --md-sys-typescale-label-small-font: var(--md-ref-typeface-brand);
+    --md-sys-typescale-label-small-line-height:8px;
+    --md-sys-typescale-label-small-size: 1rem;
+    --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
+
+}
+
+
 
   html, body { height: 100%; }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 1rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #240A31;
-    line-height: 1.5;
-  }
-
-  h5,
-  h6 {
-    color: #504C52;
-    line-height: 1.3;
-  }
-
-  p {
-    margin: 0;
-    overflow: hidden;
-    font-size: small;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Serif', serif;
-    color: #240A31;
-    line-height: 1.2;
-  }
-
-  h1 {
-    overflow: hidden;
-    font-size: xx-large;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-  
-  h2 {
-    overflow: hidden;
-    font-size: x-large;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-
-  h3 {
-    overflow: hidden;
-    font-size: larger;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-  
-  h4 {
-    overflow: hidden;
-    font-size: large;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-
-  h5 {
-    overflow: hidden;
-    font-size: medium;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-
-  h6 {
-    overflow: hidden;
-    font-size: small;
-    font-family: 'Red Hat Display', sans-serif;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {

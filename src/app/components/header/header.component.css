@@ -18,30 +18,56 @@ header {
     min-width: 288px;
 }
 
-li{
-    list-style-type: none;
-}
 
  /* Menu itens */
-svg.linkedin-logo {
-    height: 50px;
+li{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.linkedin-logo {
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-logo svg{
+    height: 48px;
     width: auto;
     cursor: pointer;
 }
 
-.menu h4{
+h4{
     text-align: center;
     cursor: pointer;
+    margin:0;
+    font-family: var(--md-sys-typescale-headline-medium-font);
+    line-height: var(----md-sys-typescale-headline-medium-line-height);
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
 }
 
 md-outlined-button {
-    --md-outlined-button-container-shape: 24px;
-    --md-outlined-button-label-text-font:--md-sys-typescale-label-large-font;
-    --md-sys-color-primary: --md-sys-color-primary;
-    --md-sys-color-outline: --md-sys-color-primary;
+    --md-outlined-button-container-shape:24px;
+    --md-outlined-button-container-height: 48px;
+    --md-outlined-button-label-text-color: var(--md-sys-color-primary);
+    --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
+    --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
+    --md-outlined-button-label-text-size: var(--md-sys-typescale-label-medium-size);
+    --md-outlined-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
+    --md-outlined-button-outline-color: var(--md-sys-color-primary);
+    --md-outlined-button-outline-width: 2px;
+    --md-outlined-button-focus-label-text-color: var();
+    --md-outlined-button-hover-label-text-color: var();
+    --md-outlined-button-hover-state-layer-color: var();
+    --md-outlined-button-hover-state-layer-opacity: var();
+    --md-outlined-button-pressed-label-text-color: var();
+    --md-outlined-button-pressed-outline-color: var();
+    --md-outlined-button-pressed-state-layer-color: var();
+    --md-outlined-button-pressed-state-layer-opacity: var();
   }
 
-svg.linkedin-logo:hover,
+.linkedin-logo:hover,
 .menu h4:hover:hover {
     transform: scale(1.1);
     transition: 0.7s all;
@@ -57,16 +83,21 @@ svg.linkedin-logo:hover,
         margin: 16px;
     }
 
-    svg.linkedin-logo {
+   .linkedin-logo{
         display: none;
     }
 
-    .menu h4{
-        font-size: medium;
+    .title{
         text-align: left;
         margin-left: 0;
     }
-
+    
+    h4{
+        font-family: var(--md-sys-typescale-headline-small-font);
+        line-height: var(----md-sys-typescale-headline-small-line-height);
+        font-size: var(--md-sys-typescale-headline-small-size);
+        font-weight: var(--md-sys-typescale-headline-small-weight);
+    }
 }
 
 /* Small */
@@ -81,7 +112,7 @@ svg.linkedin-logo:hover,
 /* Medium */
 @media screen and (min-width: 905px) and (max-width: 1239px) {
     .menu{
-        width: 940px;
+        width: 890px;
         margin-left: auto;
         margin-right: auto;
     }
