@@ -7,12 +7,12 @@ const routes: Routes = [
     path: 'projects',
     component: HomeComponent
   }
-  ,
+  /*,
   {
     path: '',
     redirectTo: 'projects',
     pathMatch: 'full'
-  }
+  }*/
 
 ];
 

@@ -26,13 +26,19 @@ li{
     align-items: center;
 }
 
+.linkedin-logo a{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
 .linkedin-logo {
     display: flex;
     align-items: center;
 }
 
 .linkedin-logo svg{
-    height: 48px;
+    height: 56px;
     width: auto;
     cursor: pointer;
 }
@@ -48,8 +54,8 @@ h4{
 }
 
 md-outlined-button {
-    --md-outlined-button-container-shape:24px;
-    --md-outlined-button-container-height: 48px;
+    --md-outlined-button-container-shape:32px;
+    --md-outlined-button-container-height: 56px;
     --md-outlined-button-label-text-color: var(--md-sys-color-primary);
     --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
     --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
