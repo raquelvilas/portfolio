@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import '@material/web/button/outlined-button.js';
+import '@material/web/button/filled-button.js';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { HomeComponent } from './components/home/home.component';
 

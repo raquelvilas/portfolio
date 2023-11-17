@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
+@Input() title : string = 'Title';
+@Input() description : string = 'Description with a lot of characters to demonstrate a concept';
 
+@Input() thereIsDescription :boolean = true;
 }

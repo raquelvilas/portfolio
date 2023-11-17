@@ -13,14 +13,35 @@
 /* Reference tokens */
 
     /* Palette */
-    --md-ref-palette-primary40: #8231AA;
-    --md-ref-palette-primary90: #F1E3F9;
+    --md-ref-palette-primary0: #080808;
+    --md-ref-palette-primary10: #44005D;
+    --md-ref-palette-primary20: #5C1E72;
+    --md-ref-palette-primary30: #75378B;
+    --md-ref-palette-primary40: #8E50A4;
+    --md-ref-palette-primary50: #A767BE;
+    --md-ref-palette-primary60: #C382DB;
+    --md-ref-palette-primary70: #E09DF8;
+    --md-ref-palette-primary80: #EDBCFF;
+    --md-ref-palette-primary90: #F6DDFF;
+    --md-ref-palette-primary95: #FAEDFF;
+    --md-ref-palette-primary99: #FDF7FF;
+    --md-ref-palette-primary100: #FEFCFF;
+    --md-ref-palette-neutral0: #000000;
+    --md-ref-palette-neutral10: #1D1B20;
+    --md-ref-palette-neutral20: #322F35;
+    --md-ref-palette-neutral30: #48464C;
+    --md-ref-palette-neutral40: #605D64;
+    --md-ref-palette-neutral50: #79767D;
+    --md-ref-palette-neutral60: #938F96;
+    --md-ref-palette-neutral70: #AEA9B1;
+    --md-ref-palette-neutral80: #CAC5CD;
+    --md-ref-palette-neutral90: #E6E0E9;
+    --md-ref-palette-neutral95: #F5EFF7;
+    --md-ref-palette-neutral99: #FDF7FF;
+    --md-ref-palette-neutral100: #FFF;
+    --md-ref-palette-black: #000;
+    --md-ref-palette-white: #FFF;
     --md-ref-palette-error40: #B3261E;
-    --md-ref-palette-black: #240A31;
-    --md-ref-palette-neutral0: #240A31;
-    --md-ref-palette-neutral40: #504C52;
-    --md-ref-palette-neutral100: #FEFEFE;
-    --md-ref-palette-white: #FEFEFE;
 
     /* Typeface */
     --md-ref-typeface-brand: 'Red Hat Display', Helvetica, Arial, sans-serif,-apple-system;
@@ -34,19 +55,32 @@
     /* Color */
     --md-sys-color-background:var(--md-ref-palette-white);
     --md-sys-color-error: var(--md-ref-palette-error40);
-    --md-sys-color-outline: var(--md-ref-palette-primary40);
+    --md-sys-color-outline: var(--md-ref-palette-neutral50);
+    --md-sys-color-outline-variant: ;
     --md-sys-color-primary: var(--md-ref-palette-primary40);
-    --md-sys-color-shadow: ;
-    --md-sys-color-surface: var(--md-ref-palette-neutral0);
-    --md-sys-color-surface-bright: ;
-    --md-sys-color-surface-container: ;
-    --md-sys-color-surface-container-high: ;
-    --md-sys-color-surface-container-highest: ;
-    --md-sys-color-surface-container-low: ;
-    --md-sys-color-surface-container-lowest: ;
-    --md-sys-color-surface-dim: ;
+    --md-sys-color-primary-container: var(--md-ref-palette-primary90);
+    --md-sys-color-primary-fixed: var(--md-ref-palette-primary90) ;
+    --md-sys-color-primary-fixed-dim: var(--md-ref-palette-primary80);
+    --md-sys-color-on-primary: var(--md-ref-palette-primary100);
+    --md-sys-color-on-primary-container: var(--md-ref-palette-primary10);
+    --md-sys-color-on-primary-fixed: var(--md-ref-palette-primary10);
+    --md-sys-color-on-primary-fixed-variant: ;
+    --md-sys-color-shadow: var(--md-ref-palette-black);
+    --md-sys-color-surface: var(--md-ref-palette-primary99);
+    --md-sys-color-surface-bright: #FEF7FF;
+    --md-sys-color-surface-container:var(--md-ref-palette-primary95);
+    --md-sys-color-surface-container-high: var(--md-ref-palette-primary90);
+    --md-sys-color-surface-container-highest: var(--md-ref-palette-primary80);
+    --md-sys-color-surface-container-low: var(--md-ref-palette-primary99);
+    --md-sys-color-surface-container-lowest: var(--md-ref-palette-primary100);
+    --md-sys-color-surface-dim: #DED8E1;
     --md-sys-color-surface-tint: ;
     --md-sys-color-surface-variant: ;
+    --md-sys-color-on-background: ;
+    --md-sys-color-on-surface: var(--md-ref-palette-neutral10);
+    --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral30);
+    --md-sys-color-scrim:var(--md-ref-palette-neutral0) ;
+
 
     /* Typescale */
     --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
@@ -100,6 +134,57 @@
     --md-sys-typescale-label-small-size: 1rem;
     --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
 
+}
+
+/* Component tokens */
+  md-outlined-button {
+    --md-outlined-button-container-shape:32px;
+    --md-outlined-button-container-height: 56px;
+    --md-outlined-button-label-text-color: var(--md-sys-color-primary);
+    --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
+    --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
+    --md-outlined-button-label-text-size: var(--md-sys-typescale-label-medium-size);
+    --md-outlined-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
+    --md-outlined-button-outline-color: var(--md-sys-color-primary);
+    --md-outlined-button-outline-width: 2px;
+    --md-outlined-button-focus-label-text-color: var();
+    --md-outlined-button-hover-label-text-color: var();
+    --md-outlined-button-hover-state-layer-color: var();
+    --md-outlined-button-hover-state-layer-opacity: var();
+    --md-outlined-button-pressed-label-text-color: var();
+    --md-outlined-button-pressed-outline-color: var();
+    --md-outlined-button-pressed-state-layer-color: var();
+    --md-outlined-button-pressed-state-layer-opacity: var();
+  }
+
+  md-filled-button {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+    --md-filled-button-container-elevation: var();
+    --md-filled-button-container-height: 56px;
+    --md-filled-button-container-shadow-color: var();
+    --md-filled-button-container-shape: 32px;
+    --md-filled-button-disabled-container-color: var();
+    --md-filled-button-disabled-container-elevation: var();
+    --md-filled-button-disabled-container-opacity: var();
+    --md-filled-button-disabled-label-text-color: var();
+    --md-filled-button-disabled-label-text-opacity: var();
+    --md-filled-button-focus-container-elevation: var();
+    --md-filled-button-focus-icon-color: var();
+    --md-filled-button-focus-label-text-color: var();
+    --md-filled-button-hover-container-elevation: var();
+    --md-filled-button-hover-icon-color: var();
+    --md-filled-button-hover-label-text-color: var();
+    --md-filled-button-hover-state-layer-color: var();
+    --md-filled-button-hover-state-layer-opacity: var();
+    --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
+    --md-filled-button-label-text-font: var(--md-sys-typescale-label-medium-font);
+    --md-filled-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
+    --md-filled-button-label-text-size: var(--md-sys-typescale-label-medium-size);
+    --md-filled-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
+    --md-filled-button-pressed-container-elevation: var();
+    --md-filled-button-pressed-label-text-color: var();
+    --md-filled-button-pressed-state-layer-color: var();
+    --md-filled-button-pressed-state-layer-opacity: var();
 }
 
 

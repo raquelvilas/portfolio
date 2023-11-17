@@ -1,5 +1,5 @@
 main{
     background-size: cover;
-    background: linear-gradient(#F1E3F9,#fefefe 90%);
+    background: var(--md-sys-color-surface);
     min-height: 60vh;
 }

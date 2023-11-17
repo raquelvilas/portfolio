@@ -2,7 +2,7 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: #F1E3F9;
+    background-color: var(--md-sys-color-surface);
     width: 100%;
   }
 
@@ -41,6 +41,7 @@ li{
     height: 56px;
     width: auto;
     cursor: pointer;
+    color: var(--md-sys-color-on-surface);
 }
 
 h4{
@@ -51,27 +52,10 @@ h4{
     line-height: var(----md-sys-typescale-headline-medium-line-height);
     font-size: var(--md-sys-typescale-headline-medium-size);
     font-weight: var(--md-sys-typescale-headline-medium-weight);
+    color: var(--md-sys-color-on-surface);
 }
 
-md-outlined-button {
-    --md-outlined-button-container-shape:32px;
-    --md-outlined-button-container-height: 56px;
-    --md-outlined-button-label-text-color: var(--md-sys-color-primary);
-    --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
-    --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
-    --md-outlined-button-label-text-size: var(--md-sys-typescale-label-medium-size);
-    --md-outlined-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
-    --md-outlined-button-outline-color: var(--md-sys-color-primary);
-    --md-outlined-button-outline-width: 2px;
-    --md-outlined-button-focus-label-text-color: var();
-    --md-outlined-button-hover-label-text-color: var();
-    --md-outlined-button-hover-state-layer-color: var();
-    --md-outlined-button-hover-state-layer-opacity: var();
-    --md-outlined-button-pressed-label-text-color: var();
-    --md-outlined-button-pressed-outline-color: var();
-    --md-outlined-button-pressed-state-layer-color: var();
-    --md-outlined-button-pressed-state-layer-opacity: var();
-  }
+
 
 .linkedin-logo:hover,
 .menu h4:hover:hover {
