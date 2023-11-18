@@ -1,11 +1,16 @@
-<div class="container">
-    <ul class="text">
-        <li>{{ title }}</li>
-        <li *ngIf="thereIsDescription" {{ description }}></li>
-        <li><md-filled-button>Explore</md-filled-button></li>
-    </ul>
-    <div class="img">
-        <img src="../../../assets/Projects_Smart review.png" alt="Image of the project Smart Reviews">
+<div class="card-container">
+    <div class="card-header" *ngIf="thereIsUtils" {{ utils }}></div>
+    <div class="card-content">
+        <div class="img">
+            <img src= "{{ imageSource }}" alt="">
+        </div>
+        <ul class="text">
+            <li>{{ title }}</li>
+            <li>{{ description }}</li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <md-filled-button>Explore</md-filled-button>
     </div>
 </div>
 

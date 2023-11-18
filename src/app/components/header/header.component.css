@@ -1,5 +1,5 @@
 /* Menu container*/
-header {
+.header-container {
     display: flex;
     justify-content: center;
     background-color: var(--md-sys-color-surface);
@@ -38,7 +38,7 @@ li{
 }
 
 .linkedin-logo svg{
-    height: 56px;
+    height: 64px;
     width: auto;
     cursor: pointer;
     color: var(--md-sys-color-on-surface);
@@ -112,7 +112,7 @@ h4{
 @media screen and (min-width: 1240px) and (max-width: 2300px) {
     .menu{
         width: 100%;
-        margin-left: 200px;
-        margin-right: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }

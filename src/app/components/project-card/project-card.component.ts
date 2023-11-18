@@ -6,8 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
-@Input() title : string = 'Title';
-@Input() description : string = 'Description with a lot of characters to demonstrate a concept';
+  @Input() title : string = '';
+  @Input() description : string = '';
+  @Input() imageSource: string = '';
+ 
+  thereIsUtils:boolean = false;
 
-@Input() thereIsDescription :boolean = true;
 }

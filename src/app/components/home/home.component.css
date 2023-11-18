@@ -1,4 +1,4 @@
-/* Section container*/
+/* Containers*/
 section {
     display: flex;
     flex-direction: column;
@@ -7,7 +7,48 @@ section {
     background-color: none;
     min-width: 288px;
     width: 100%;
+    padding-top:80px;
   }
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /*horizontal alignment */
+    align-items: center;   /*vertical alignment */
+    width: 100%;
+    flex-wrap: wrap;
+}  
+
+.about-me{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*horizontal alignment */
+    align-items: center;   /*vertical alignment */
+    width: 100%;
+}    
+
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*vertical alignment */
+    align-items: center;   /*horizontal alignment */
+    width: 100%;
+}    
+
+
+/* Containers itens */
+.about-me img{
+    width: 288px;
+    object-fit: contain;
+}
+
+.about-me .text{
+    font-family: var(--md-sys-typescale-body-large-font);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    font-size: var(--md-sys-typescale-body-large-size);
+    font-weight: var(--md-sys-typescale-body-large-weight);
+    width: 100%;
+}
 
 
 /* Responsive layouts */
@@ -18,6 +59,10 @@ section {
         width: 100%;
         margin: 16px;
     }
+
+    .about-me{
+        flex-direction: column;
+    }    
 }
 
 /* Small */
@@ -41,8 +86,8 @@ section {
 /* Large */
 @media screen and (min-width: 1240px) and (max-width: 2300px) {
     section{
-        width: 100%;
-        margin-left: 200px;
-        margin-right: 200px;
+        width: auto;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }

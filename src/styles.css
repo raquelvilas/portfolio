@@ -139,7 +139,7 @@
 /* Component tokens */
   md-outlined-button {
     --md-outlined-button-container-shape:32px;
-    --md-outlined-button-container-height: 56px;
+    --md-outlined-button-container-height: 64px;
     --md-outlined-button-label-text-color: var(--md-sys-color-primary);
     --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
     --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
@@ -160,7 +160,7 @@
   md-filled-button {
     --md-filled-button-container-color: var(--md-sys-color-primary);
     --md-filled-button-container-elevation: var();
-    --md-filled-button-container-height: 56px;
+    --md-filled-button-container-height: 64px;
     --md-filled-button-container-shadow-color: var();
     --md-filled-button-container-shape: 32px;
     --md-filled-button-disabled-container-color: var();
@@ -189,25 +189,11 @@
 
 
 
-  html, body { height: 100%; }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
+  html, 
+  body { 
+    height: 100%; 
   }
+
 
 
 
