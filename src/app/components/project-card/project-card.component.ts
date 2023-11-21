@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import '@material/web/button/outlined-button.js';
+import '@material/web/button/filled-button.js';
 
 @Component({
   selector: 'app-project-card',

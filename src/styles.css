@@ -2,13 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Noto+Serif&display=swap');
 @import '~normalize.css';
 
-:host {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;   /* let fonts appear as with a good resolution */
-    -moz-osx-font-smoothing: grayscale;    /* let fonts appear as with a good resolution for mac*/
-  }
-
 :root{
+
+  -webkit-font-smoothing: antialiased;   /* let fonts appear as with a good resolution */
+  -moz-osx-font-smoothing: grayscale;    /* let fonts appear as with a good resolution for mac*/
 
 /* Reference tokens */
 
@@ -50,6 +47,41 @@
     --md-ref-typeface-weight-medium: 500;
     --md-ref-typeface-weight-regular: 400;
 
+    /* Vertical spacing */
+    --app-spacing-vertical-nano: 8px;
+    --app-spacing-vertical-micro: 16px;
+    --app-spacing-vertical-small: 32px;
+    --app-spacing-vertical-medium: 48px;
+    --app-spacing-vertical-large: 64px;
+    --app-spacing-vertical-huge: 80px;
+    --app-spacing-vertical-giant: 96px;
+    
+    /* Horizontal spacing */
+    --app-spacing-horizontal-nano: 8px;
+    --app-spacing-horizontal-micro: 16px;
+    --app-spacing-horizontal-xsmall: 24px;
+    --app-spacing-horizontal-small: 32px;
+    --app-spacing-horizontal-medium: 40px;
+    --app-spacing-horizontal-large: 48px;
+    --app-spacing-horizontal-xlarge: 64px;
+    --app-spacing-horizontal-huge: 80px;
+    --app-spacing-horizontal-giant: 120px;
+
+     /* Full element spacing */
+     --app-spacing-full-nano: 8px;
+     --app-spacing-full-micro: 16px;
+     --app-spacing-full-small: 32px;
+     --app-spacing-full-medium: 48px;
+
+
+      /* Border radius*/
+      --app-border-small-radius: 8px;
+      --app-border-standard-radius: 32px;
+
+
+      /* Border thickness*/      
+      --app-border-standard-thickness: 2px;
+    
 
 /* System tokens */
     /* Color */
@@ -138,7 +170,7 @@
 
 /* Component tokens */
   md-outlined-button {
-    --md-outlined-button-container-shape:32px;
+    --md-outlined-button-container-shape: var(--app-border-standard-radius);
     --md-outlined-button-container-height: 64px;
     --md-outlined-button-label-text-color: var(--md-sys-color-primary);
     --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
@@ -146,7 +178,7 @@
     --md-outlined-button-label-text-size: var(--md-sys-typescale-label-medium-size);
     --md-outlined-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
     --md-outlined-button-outline-color: var(--md-sys-color-primary);
-    --md-outlined-button-outline-width: 2px;
+    --md-outlined-button-outline-width: var(--app-border-standard-thickness);
     --md-outlined-button-focus-label-text-color: var();
     --md-outlined-button-hover-label-text-color: var();
     --md-outlined-button-hover-state-layer-color: var();
@@ -162,14 +194,13 @@
     --md-filled-button-container-elevation: var();
     --md-filled-button-container-height: 64px;
     --md-filled-button-container-shadow-color: var();
-    --md-filled-button-container-shape: 32px;
+    --md-filled-button-container-shape: var(--app-border-standard-radius);
     --md-filled-button-disabled-container-color: var();
     --md-filled-button-disabled-container-elevation: var();
     --md-filled-button-disabled-container-opacity: var();
     --md-filled-button-disabled-label-text-color: var();
     --md-filled-button-disabled-label-text-opacity: var();
     --md-filled-button-focus-container-elevation: var();
-    --md-filled-button-focus-icon-color: var();
     --md-filled-button-focus-label-text-color: var();
     --md-filled-button-hover-container-elevation: var();
     --md-filled-button-hover-icon-color: var();
@@ -189,10 +220,6 @@
 
 
 
-  html, 
-  body { 
-    height: 100%; 
-  }
 
 
 

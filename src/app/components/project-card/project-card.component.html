@@ -1,15 +1,16 @@
-<div class="card-container">
-    <div class="card-header" *ngIf="thereIsUtils" {{ utils }}></div>
-    <div class="card-content">
-        <div class="img">
-            <img src= "{{ imageSource }}" alt="">
+<div class="card">
+    <div class="card__header" *ngIf="thereIsUtils" {{ utils }}></div>
+    <div class="card__content">
+        <div class="card__content__img">
+            <div class="glow"></div>
+            <img class="card__content__img__src" src= "{{ imageSource }}" alt="">
         </div>
-        <ul class="text">
+        <ul class="card__content__text">
             <li>{{ title }}</li>
             <li>{{ description }}</li>
         </ul>
     </div>
-    <div class="card-footer">
+    <div class="card__footer">
         <md-filled-button>Explore</md-filled-button>
     </div>
 </div>

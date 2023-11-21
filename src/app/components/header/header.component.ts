@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import '@material/web/button/outlined-button.js';
 
 @Component({
   selector: 'app-header',

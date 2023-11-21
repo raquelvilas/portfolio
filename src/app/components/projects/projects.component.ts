@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css']
 })
-export class HomeComponent {
+export class ProjectsComponent {
   imagePath1 = '../../../assets/images/Projects-Smart-Review.png';
   title1 = 'Smarter preparation for exams';
   description1 = 'Practice with questions became more regular when we created smart trainings.'

@@ -1,5 +1,6 @@
 main{
     background-size: cover;
     background: var(--md-sys-color-surface);
-    min-height: 60vh;
+    min-height: 100%vh;
+    box-sizing: border-box;
 }
