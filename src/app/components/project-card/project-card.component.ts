@@ -11,6 +11,7 @@ export class ProjectCardComponent {
   @Input() title : string = '';
   @Input() description : string = '';
   @Input() imageSource: string = '';
+  @Input() imageAlt: string = '';
  
   thereIsUtils:boolean = false;
 

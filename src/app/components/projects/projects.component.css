@@ -7,9 +7,8 @@ strong{
 .projects{
     display: flex;
     justify-content: space-between; /*horizontal alignment */
-    align-items: center;   /*vertical alignment */
+    align-items: flex-start;   /*vertical alignment */
     flex-flow: row wrap;
-    min-width: 288px;
     box-sizing: border-box;
 }  
 
@@ -26,9 +25,9 @@ strong{
 
 /* Containers itens */
 .about-me__img{
-    width: 80px;
+    width: 200px;
     order:0;
-    flex-grow: 0.5;
+    flex-grow: 2;
     align-self: flex-end;
     flex:1;
 }
@@ -38,12 +37,11 @@ strong{
     align-self: flex-start;
     flex:3;
     padding: var(--app-spacing-full-small);
-    background-color: var(--md-sys-color-surface-dim);
     border-radius: var(--app-border-small-radius);
-    font-family: var(--md-sys-typescale-body-large-font);
-    line-height: var(--md-sys-typescale-body-large-line-height);
-    font-size: var(--md-sys-typescale-body-large-size);
-    font-weight: var(--md-sys-typescale-body-large-weight);
+    font-family: var(--md-sys-typescale-body-medium-font);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    font-weight: var(--md-sys-typescale-body-medium-weight);
 }  
 
 
@@ -79,15 +77,16 @@ strong{
 /* Small */
 @media screen and (min-width: 600px) and (max-width: 904px) {
     .projects{
-        width: auto;
+        width: 100%;
         padding: var(--app-spacing-full-small);
-        box-sizing: border-box;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .projects__project{
-        width: 30%;
-        margin: 16px;
-        box-sizing: border-box;
+        width: auto;
+        margin: var(--app-spacing-full-micro);
     }
 
     .about-me{
@@ -107,17 +106,17 @@ strong{
 /* Medium */
 @media screen and (min-width: 905px) and (max-width: 1239px) {
     .projects{
-        width: auto;
-        padding-left: 7.5%;
-        padding-right: 7.5%;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
         padding-top: var(--app-spacing-horizontal-huge);
         padding-bottom: var(--app-spacing-horizontal-huge);
+        justify-content: space-between;
     }
 
     .projects__project{
-        min-width: 288px;
-        width: 30%;
         margin: 1%;
+        width: 30%;
     }
 
     .about-me{
@@ -145,6 +144,12 @@ strong{
         padding-right: 5%;
         padding-top: var(--app-spacing-horizontal-huge);
         padding-bottom: var(--app-spacing-horizontal-huge);
+    }
+
+    .projects__project{
+        margin: 1%;
+        width: 30%;
+        min-width: 270px;
     }
 
     .projects__project:nth-child(3n+1){

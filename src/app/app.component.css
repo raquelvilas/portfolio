@@ -3,4 +3,5 @@ main{
     background: var(--md-sys-color-surface);
     min-height: 100%vh;
     box-sizing: border-box;
+    
 }
