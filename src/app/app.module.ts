@@ -4,12 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import '@material/web/button/outlined-button.js';
 import '@material/web/button/filled-button.js';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,14 +25,14 @@ import { ProjectsComponent } from './components/projects/projects.component';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
 
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

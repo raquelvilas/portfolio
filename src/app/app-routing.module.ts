@@ -5,19 +5,17 @@ import { ProjectsComponent } from './components/projects/projects.component';
 const routes: Routes = [
   {
     path: 'projects',
-    component: ProjectsComponent
-  }
-  /*,
+    component: ProjectsComponent,
+  },
   {
     path: '',
     redirectTo: 'projects',
-    pathMatch: 'full'
-  }*/
-
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

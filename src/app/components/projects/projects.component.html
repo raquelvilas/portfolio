@@ -1,22 +1,7 @@
 <section class ="projects">
-    <app-project-card class="projects__project"
-        [imageSource]="imagePath1"
-        [imageAlt]="imageAlt1"
-        [title]="title1"
-        [description]="description1"
-    ></app-project-card>
-    <app-project-card class="projects__project"
-        [imageSource]="imagePath2"
-        [imageAlt]="imageAlt2"
-        [title]="title2"
-        [description]="description2"
-    ></app-project-card>
-    <app-project-card class="projects__project"
-        [imageSource]="imagePath3"
-        [imageAlt]="imageAlt3"
-        [title]="title3"
-        [description]="description3"
-    ></app-project-card>
+    <div *ngFor="let item of listOfProjects">   <!--for each item from the array created by this class attribute-->
+        <app-project-card [project]="item" class="projects__project"></app-project-card>  <!--use property binding and consider that the item has the structure provided by the child (project) decorated with an @Input-->
+    </div>
 </section>
 
 <section class ="about-me">

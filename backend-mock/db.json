@@ -1,0 +1,25 @@
+{
+    "projects": [    
+        {
+            "imageSource" : "../../../assets/images/Projects-Smart-Review.png",
+            "imageAlt" : "Image with an example of a smart review card",
+            "title" : "Smarter preparation for exams",
+            "description" : "Practice with questions became more regular when we created smart trainings."
+        },
+
+        {
+            "imageSource" : "../../../assets/images/Projects-Finding-Content-Easily.png",
+            "imageAlt" : "Image with a phone focusing on filters added to the search experience",
+            "title" : "Finding content easily",
+            "description" : "Content consumption increased by 10% throught an improved search experience."
+        },
+
+        {
+            "imageSource" : "../../../assets/images/Projects-Design-System.png",
+            "imageAlt" : "Image with examples of components created",
+            "title" : "Initiatives for a design system",
+            "description" : "How we built one from scratch."
+        }
+        
+    ]
+}

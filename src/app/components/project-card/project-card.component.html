@@ -1,18 +1,24 @@
 <div class="card">
-    <div class="card__header" *ngIf="thereIsUtils" {{ utils }}></div>
+  <div class="card__header" *ngIf="thereIsUtils" {{ utils }}></div>
+
+  <div class="card__body">
+    <div class="card__img">
+      <img
+        class="card__img__src"
+        src="{{ project.imageSource }}"
+        alt="{{ project.imageAlt }}"
+      />
+    </div>
+
     <div class="card__content">
-        <div class="card__content__img">
-            <div class="glow"></div>
-            <img class="card__content__img__src" src= "{{ imageSource }}" alt="">
-        </div>
-        <ul class="card__content__text">
-            <li>{{ title }}</li>
-            <li>{{ description }}</li>
-        </ul>
+      <ul class="card__content__text">
+        <li>{{ project.title }}</li>
+        <li>{{ project.description }}</li>
+      </ul>
     </div>
-    <div class="card__footer">
-        <md-filled-button>Explore</md-filled-button>
-    </div>
+  </div>
+
+  <div class="card__footer">
+    <md-filled-button>Explore</md-filled-button>
+  </div>
 </div>
-
-
