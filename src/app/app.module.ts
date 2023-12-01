@@ -11,15 +11,17 @@ import {
 import '@material/web/button/outlined-button.js';
 import '@material/web/button/filled-button.js';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { ProjectsComponent } from './components/projects/projects.component';
+import { ListProjectsComponent } from './components/projects/list-projects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailProjectComponent } from './components/detail-project/detail-project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProjectCardComponent,
-    ProjectsComponent,
+    ListProjectsComponent,
+    DetailProjectComponent,
   ],
   imports: [
     BrowserModule,

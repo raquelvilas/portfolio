@@ -1,230 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans:wght@300&family=Noto+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-@import '~normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans:wght@300&family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import "~normalize.css";
 
-:root{
+:root {
+  -webkit-font-smoothing: antialiased; /* let fonts appear as with a good resolution */
+  -moz-osx-font-smoothing: grayscale; /* let fonts appear as with a good resolution for mac*/
 
-  -webkit-font-smoothing: antialiased;   /* let fonts appear as with a good resolution */
-  -moz-osx-font-smoothing: grayscale;    /* let fonts appear as with a good resolution for mac*/
+  /* Reference tokens */
 
-/* Reference tokens */
+  /* Palette */
+  --md-ref-palette-primary0: #080808;
+  --md-ref-palette-primary10: #44005d;
+  --md-ref-palette-primary20: #5c1e72;
+  --md-ref-palette-primary30: #75378b;
+  --md-ref-palette-primary40: #8e50a4;
+  --md-ref-palette-primary50: #a767be;
+  --md-ref-palette-primary60: #c382db;
+  --md-ref-palette-primary70: #e09df8;
+  --md-ref-palette-primary80: #edbcff;
+  --md-ref-palette-primary90: #f6ddff;
+  --md-ref-palette-primary95: #faedff;
+  --md-ref-palette-primary99: #fdf7ff;
+  --md-ref-palette-primary100: #fefcff;
+  --md-ref-palette-neutral0: #000000;
+  --md-ref-palette-neutral10: #1d1b20;
+  --md-ref-palette-neutral20: #322f35;
+  --md-ref-palette-neutral30: #48464c;
+  --md-ref-palette-neutral40: #605d64;
+  --md-ref-palette-neutral50: #79767d;
+  --md-ref-palette-neutral60: #938f96;
+  --md-ref-palette-neutral70: #aea9b1;
+  --md-ref-palette-neutral80: #cac5cd;
+  --md-ref-palette-neutral90: #e6e0e9;
+  --md-ref-palette-neutral95: #f5eff7;
+  --md-ref-palette-neutral99: #fdf7ff;
+  --md-ref-palette-neutral100: #fff;
+  --md-ref-palette-black: #000;
+  --md-ref-palette-white: #fff;
+  --md-ref-palette-error40: #b3261e;
 
-    /* Palette */
-    --md-ref-palette-primary0: #080808;
-    --md-ref-palette-primary10: #44005D;
-    --md-ref-palette-primary20: #5C1E72;
-    --md-ref-palette-primary30: #75378B;
-    --md-ref-palette-primary40: #8E50A4;
-    --md-ref-palette-primary50: #A767BE;
-    --md-ref-palette-primary60: #C382DB;
-    --md-ref-palette-primary70: #E09DF8;
-    --md-ref-palette-primary80: #EDBCFF;
-    --md-ref-palette-primary90: #F6DDFF;
-    --md-ref-palette-primary95: #FAEDFF;
-    --md-ref-palette-primary99: #FDF7FF;
-    --md-ref-palette-primary100: #FEFCFF;
-    --md-ref-palette-neutral0: #000000;
-    --md-ref-palette-neutral10: #1D1B20;
-    --md-ref-palette-neutral20: #322F35;
-    --md-ref-palette-neutral30: #48464C;
-    --md-ref-palette-neutral40: #605D64;
-    --md-ref-palette-neutral50: #79767D;
-    --md-ref-palette-neutral60: #938F96;
-    --md-ref-palette-neutral70: #AEA9B1;
-    --md-ref-palette-neutral80: #CAC5CD;
-    --md-ref-palette-neutral90: #E6E0E9;
-    --md-ref-palette-neutral95: #F5EFF7;
-    --md-ref-palette-neutral99: #FDF7FF;
-    --md-ref-palette-neutral100: #FFF;
-    --md-ref-palette-black: #000;
-    --md-ref-palette-white: #FFF;
-    --md-ref-palette-error40: #B3261E;
+  /* Typeface */
+  --md-ref-typeface-brand: "Raleway", "Red Hat Display", Helvetica, Arial,
+    sans-serif, -apple-system;
+  --md-ref-typeface-plain: "Lora", serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --md-ref-typeface-weight-bold: 700;
+  --md-ref-typeface-weight-medium: 500;
+  --md-ref-typeface-weight-regular: 400;
 
-    /* Typeface */
-    --md-ref-typeface-brand: 'Raleway', 'Red Hat Display', Helvetica, Arial, sans-serif,-apple-system;
-    --md-ref-typeface-plain: 'Lora',serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --md-ref-typeface-weight-bold: 700;
-    --md-ref-typeface-weight-medium: 500;
-    --md-ref-typeface-weight-regular: 400;
+  /* Vertical spacing */
+  --app-spacing-vertical-nano: 8px;
+  --app-spacing-vertical-micro: 16px;
+  --app-spacing-vertical-small: 32px;
+  --app-spacing-vertical-medium: 48px;
+  --app-spacing-vertical-large: 64px;
+  --app-spacing-vertical-huge: 80px;
+  --app-spacing-vertical-giant: 96px;
 
-    /* Vertical spacing */
-    --app-spacing-vertical-nano: 8px;
-    --app-spacing-vertical-micro: 16px;
-    --app-spacing-vertical-small: 32px;
-    --app-spacing-vertical-medium: 48px;
-    --app-spacing-vertical-large: 64px;
-    --app-spacing-vertical-huge: 80px;
-    --app-spacing-vertical-giant: 96px;
-    
-    /* Horizontal spacing */
-    --app-spacing-horizontal-nano: 8px;
-    --app-spacing-horizontal-micro: 16px;
-    --app-spacing-horizontal-xsmall: 24px;
-    --app-spacing-horizontal-small: 32px;
-    --app-spacing-horizontal-medium: 40px;
-    --app-spacing-horizontal-large: 48px;
-    --app-spacing-horizontal-xlarge: 64px;
-    --app-spacing-horizontal-huge: 80px;
-    --app-spacing-horizontal-giant: 120px;
+  /* Horizontal spacing */
+  --app-spacing-horizontal-nano: 8px;
+  --app-spacing-horizontal-micro: 16px;
+  --app-spacing-horizontal-xsmall: 24px;
+  --app-spacing-horizontal-small: 32px;
+  --app-spacing-horizontal-medium: 40px;
+  --app-spacing-horizontal-large: 48px;
+  --app-spacing-horizontal-xlarge: 64px;
+  --app-spacing-horizontal-huge: 80px;
+  --app-spacing-horizontal-giant: 120px;
 
-     /* Full element spacing */
-     --app-spacing-full-nano: 8px;
-     --app-spacing-full-micro: 16px;
-     --app-spacing-full-small: 32px;
-     --app-spacing-full-medium: 48px;
+  /* Full element spacing */
+  --app-spacing-full-nano: 8px;
+  --app-spacing-full-micro: 16px;
+  --app-spacing-full-small: 32px;
+  --app-spacing-full-medium: 48px;
 
+  /* Border radius*/
+  --app-border-small-radius: 8px;
+  --app-border-standard-radius: 32px;
 
-      /* Border radius*/
-      --app-border-small-radius: 8px;
-      --app-border-standard-radius: 32px;
+  /* Border thickness*/
+  --app-border-standard-thickness: 2px;
 
+  /* System tokens */
+  /* Color */
+  --md-sys-color-background: var(--md-ref-palette-white);
+  --md-sys-color-error: var(--md-ref-palette-error40);
+  --md-sys-color-outline: var(--md-ref-palette-neutral50);
+  --md-sys-color-outline-variant: ;
+  --md-sys-color-primary: var(--md-ref-palette-primary40);
+  --md-sys-color-primary-container: var(--md-ref-palette-primary90);
+  --md-sys-color-primary-fixed: var(--md-ref-palette-primary90);
+  --md-sys-color-primary-fixed-dim: var(--md-ref-palette-primary80);
+  --md-sys-color-on-primary: var(--md-ref-palette-primary100);
+  --md-sys-color-on-primary-container: var(--md-ref-palette-primary10);
+  --md-sys-color-on-primary-fixed: var(--md-ref-palette-primary10);
+  --md-sys-color-on-primary-fixed-variant: ;
+  --md-sys-color-shadow: var(--md-ref-palette-black);
+  --md-sys-color-surface: var(--md-ref-palette-primary99);
+  --md-sys-color-surface-bright: #fef7ff;
+  --md-sys-color-surface-container: var(--md-ref-palette-primary95);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-primary90);
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-primary80);
+  --md-sys-color-surface-container-low: var(--md-ref-palette-primary99);
+  --md-sys-color-surface-container-lowest: var(--md-ref-palette-primary100);
+  --md-sys-color-surface-dim: #ded8e1;
+  --md-sys-color-surface-tint: ;
+  --md-sys-color-surface-variant: ;
+  --md-sys-color-on-background: ;
+  --md-sys-color-on-surface: var(--md-ref-palette-neutral10);
+  --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral30);
+  --md-sys-color-scrim: var(--md-ref-palette-neutral0);
 
-      /* Border thickness*/      
-      --app-border-standard-thickness: 2px;
-    
-
-/* System tokens */
-    /* Color */
-    --md-sys-color-background:var(--md-ref-palette-white);
-    --md-sys-color-error: var(--md-ref-palette-error40);
-    --md-sys-color-outline: var(--md-ref-palette-neutral50);
-    --md-sys-color-outline-variant: ;
-    --md-sys-color-primary: var(--md-ref-palette-primary40);
-    --md-sys-color-primary-container: var(--md-ref-palette-primary90);
-    --md-sys-color-primary-fixed: var(--md-ref-palette-primary90) ;
-    --md-sys-color-primary-fixed-dim: var(--md-ref-palette-primary80);
-    --md-sys-color-on-primary: var(--md-ref-palette-primary100);
-    --md-sys-color-on-primary-container: var(--md-ref-palette-primary10);
-    --md-sys-color-on-primary-fixed: var(--md-ref-palette-primary10);
-    --md-sys-color-on-primary-fixed-variant: ;
-    --md-sys-color-shadow: var(--md-ref-palette-black);
-    --md-sys-color-surface: var(--md-ref-palette-primary99);
-    --md-sys-color-surface-bright: #FEF7FF;
-    --md-sys-color-surface-container:var(--md-ref-palette-primary95);
-    --md-sys-color-surface-container-high: var(--md-ref-palette-primary90);
-    --md-sys-color-surface-container-highest: var(--md-ref-palette-primary80);
-    --md-sys-color-surface-container-low: var(--md-ref-palette-primary99);
-    --md-sys-color-surface-container-lowest: var(--md-ref-palette-primary100);
-    --md-sys-color-surface-dim: #DED8E1;
-    --md-sys-color-surface-tint: ;
-    --md-sys-color-surface-variant: ;
-    --md-sys-color-on-background: ;
-    --md-sys-color-on-surface: var(--md-ref-palette-neutral10);
-    --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral30);
-    --md-sys-color-scrim:var(--md-ref-palette-neutral0) ;
-
-
-    /* Typescale */
-    --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
-    --md-sys-typescale-body-large-line-height: 3rem;
-    --md-sys-typescale-body-large-size: 2.37rem;
-    --md-sys-typescale-body-large-weight: var(--md-ref-typeface-weight-regular);
-    --md-sys-typescale-body-medium-font: var(--md-ref-typeface-plain);
-    --md-sys-typescale-body-medium-line-height: 2.5rem;
-    --md-sys-typescale-body-medium-size: 1.77rem;
-    --md-sys-typescale-body-medium-weight: var(--md-ref-typeface-weight-regular);
-    --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
-    --md-sys-typescale-body-small-line-height: 1.8rem;
-    --md-sys-typescale-body-small-size: 1.33rem;
-    --md-sys-typescale-body-small-weight: var(--md-ref-typeface-weight-regular);
-    --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-display-large-line-height: 6rem;
-    --md-sys-typescale-display-large-size: 5.61rem;
-    --md-sys-typescale-display-large-weight: var(--md-ref-typeface-weight-bold);
-    --md-sys-typescale-display-medium-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-display-medium-line-height: 4.5rem;
-    --md-sys-typescale-display-medium-size: 4.21rem;
-    --md-sys-typescale-display-medium-weight: var(--md-ref-typeface-weight-bold);
-    --md-sys-typescale-display-small-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-display-small-line-height: 3.5rem;
-    --md-sys-typescale-display-small-size: 3.16rem;
-    --md-sys-typescale-display-small-weight: var(--md-ref-typeface-weight-bold);
-    --md-sys-typescale-headline-large-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-headline-large-line-height: 3.5rem;
-    --md-sys-typescale-headline-large-size: 3.16rem;
-    --md-sys-typescale-headline-large-weight: var(--md-ref-typeface-weight-medium);
-    --md-sys-typescale-headline-medium-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-headline-medium-line-height: 3rem;
-    --md-sys-typescale-headline-medium-size: 2.37rem;
-    --md-sys-typescale-headline-medium-weight: var(--md-ref-typeface-weight-medium);
-    --md-sys-typescale-headline-small-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-headline-small-line-height: 2.5rem;
-    --md-sys-typescale-headline-small-size: 1.77rem;
-    --md-sys-typescale-headline-small-weight: var(--md-ref-typeface-weight-medium);
-    --md-sys-typescale-label-large-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-label-large-line-height: 3rem;
-    --md-sys-typescale-label-large-size: 2.37rem;
-    --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-bold);
-    --md-sys-typescale-label-large-weight-prominent: var(--md-ref-typeface-weight-medium);
-    --md-sys-typescale-label-medium-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-label-medium-line-height: 2.37rem;
-    --md-sys-typescale-label-medium-size: 1.77rem;
-    --md-sys-typescale-label-medium-weight: var(--md-ref-typeface-weight-bold);
-    --md-sys-typescale-label-medium-weight-prominent: var(--md-ref-typeface-weight-medium);
-    --md-sys-typescale-label-small-font: var(--md-ref-typeface-brand);
-    --md-sys-typescale-label-small-line-height:1.8rem;
-    --md-sys-typescale-label-small-size: 1.33rem;
-    --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
-
+  /* Typescale */
+  --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-large-line-height: 3rem;
+  --md-sys-typescale-body-large-size: 2.37rem;
+  --md-sys-typescale-body-large-weight: var(--md-ref-typeface-weight-regular);
+  --md-sys-typescale-body-medium-font: var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-medium-line-height: 2.5rem;
+  --md-sys-typescale-body-medium-size: 1.77rem;
+  --md-sys-typescale-body-medium-weight: var(--md-ref-typeface-weight-regular);
+  --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-small-line-height: 1.8rem;
+  --md-sys-typescale-body-small-size: 1.33rem;
+  --md-sys-typescale-body-small-weight: var(--md-ref-typeface-weight-regular);
+  --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-display-large-line-height: 6rem;
+  --md-sys-typescale-display-large-size: 5.61rem;
+  --md-sys-typescale-display-large-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-display-medium-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-display-medium-line-height: 4.5rem;
+  --md-sys-typescale-display-medium-size: 4.21rem;
+  --md-sys-typescale-display-medium-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-display-small-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-display-small-line-height: 3.5rem;
+  --md-sys-typescale-display-small-size: 3.16rem;
+  --md-sys-typescale-display-small-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-headline-large-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-large-line-height: 3.5rem;
+  --md-sys-typescale-headline-large-size: 3.16rem;
+  --md-sys-typescale-headline-large-weight: var(
+    --md-ref-typeface-weight-medium
+  );
+  --md-sys-typescale-headline-medium-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-medium-line-height: 3rem;
+  --md-sys-typescale-headline-medium-size: 2.37rem;
+  --md-sys-typescale-headline-medium-weight: var(
+    --md-ref-typeface-weight-medium
+  );
+  --md-sys-typescale-headline-small-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-small-line-height: 2.5rem;
+  --md-sys-typescale-headline-small-size: 1.77rem;
+  --md-sys-typescale-headline-small-weight: var(
+    --md-ref-typeface-weight-medium
+  );
+  --md-sys-typescale-label-large-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-label-large-line-height: 3rem;
+  --md-sys-typescale-label-large-size: 2.37rem;
+  --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-label-large-weight-prominent: var(
+    --md-ref-typeface-weight-medium
+  );
+  --md-sys-typescale-label-medium-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-label-medium-line-height: 2.37rem;
+  --md-sys-typescale-label-medium-size: 1.77rem;
+  --md-sys-typescale-label-medium-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-label-medium-weight-prominent: var(
+    --md-ref-typeface-weight-medium
+  );
+  --md-sys-typescale-label-small-font: var(--md-ref-typeface-brand);
+  --md-sys-typescale-label-small-line-height: 1.8rem;
+  --md-sys-typescale-label-small-size: 1.33rem;
+  --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
 }
 
 /* Component tokens */
-  md-outlined-button {
-    --md-outlined-button-container-shape: var(--app-border-standard-radius);
-    --md-outlined-button-container-height: 64px;
-    --md-outlined-button-label-text-color: var(--md-sys-color-primary);
-    --md-outlined-button-label-text-font: var(--md-sys-typescale-label-medium-font);
-    --md-outlined-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
-    --md-outlined-button-label-text-size: var(--md-sys-typescale-label-medium-size);
-    --md-outlined-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
-    --md-outlined-button-outline-color: var(--md-sys-color-primary);
-    --md-outlined-button-outline-width: var(--app-border-standard-thickness);
-    --md-outlined-button-focus-label-text-color: var();
-    --md-outlined-button-hover-label-text-color: var();
-    --md-outlined-button-hover-state-layer-color: var();
-    --md-outlined-button-hover-state-layer-opacity: var();
-    --md-outlined-button-pressed-label-text-color: var();
-    --md-outlined-button-pressed-outline-color: var();
-    --md-outlined-button-pressed-state-layer-color: var();
-    --md-outlined-button-pressed-state-layer-opacity: var();
-  }
-
-  md-filled-button {
-    --md-filled-button-container-color: var(--md-sys-color-primary);
-    --md-filled-button-container-elevation: var();
-    --md-filled-button-container-height: 64px;
-    --md-filled-button-container-shadow-color: var();
-    --md-filled-button-container-shape: var(--app-border-standard-radius);
-    --md-filled-button-disabled-container-color: var();
-    --md-filled-button-disabled-container-elevation: var();
-    --md-filled-button-disabled-container-opacity: var();
-    --md-filled-button-disabled-label-text-color: var();
-    --md-filled-button-disabled-label-text-opacity: var();
-    --md-filled-button-focus-container-elevation: var();
-    --md-filled-button-focus-label-text-color: var();
-    --md-filled-button-hover-container-elevation: var();
-    --md-filled-button-hover-icon-color: var();
-    --md-filled-button-hover-label-text-color: var();
-    --md-filled-button-hover-state-layer-color: var();
-    --md-filled-button-hover-state-layer-opacity: var();
-    --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
-    --md-filled-button-label-text-font: var(--md-sys-typescale-label-medium-font);
-    --md-filled-button-label-text-line-height: var(--md-sys-typescale-label-medium-line-height);
-    --md-filled-button-label-text-size: var(--md-sys-typescale-label-medium-size);
-    --md-filled-button-label-text-weight: var(--md-sys-typescale-label-medium-weight);
-    --md-filled-button-pressed-container-elevation: var();
-    --md-filled-button-pressed-label-text-color: var();
-    --md-filled-button-pressed-state-layer-color: var();
-    --md-filled-button-pressed-state-layer-opacity: var();
+md-outlined-button {
+  --md-outlined-button-container-shape: var(--app-border-standard-radius);
+  --md-outlined-button-container-height: 64px;
+  --md-outlined-button-label-text-color: var(--md-sys-color-primary);
+  --md-outlined-button-label-text-font: var(
+    --md-sys-typescale-label-medium-font
+  );
+  --md-outlined-button-label-text-line-height: var(
+    --md-sys-typescale-label-medium-line-height
+  );
+  --md-outlined-button-label-text-size: var(
+    --md-sys-typescale-label-medium-size
+  );
+  --md-outlined-button-label-text-weight: var(
+    --md-sys-typescale-label-medium-weight
+  );
+  --md-outlined-button-outline-color: var(--md-sys-color-primary);
+  --md-outlined-button-outline-width: var(--app-border-standard-thickness);
+  --md-outlined-button-focus-label-text-color: var();
+  --md-outlined-button-hover-label-text-color: var();
+  --md-outlined-button-hover-state-layer-color: var();
+  --md-outlined-button-hover-state-layer-opacity: var();
+  --md-outlined-button-pressed-label-text-color: var();
+  --md-outlined-button-pressed-outline-color: var();
+  --md-outlined-button-pressed-state-layer-color: var();
+  --md-outlined-button-pressed-state-layer-opacity: var();
 }
 
+md-filled-button {
+  --md-filled-button-container-color: var(--md-sys-color-primary);
+  --md-filled-button-container-elevation: var();
+  --md-filled-button-container-height: 64px;
+  --md-filled-button-container-shadow-color: var();
+  --md-filled-button-container-shape: var(--app-border-standard-radius);
+  --md-filled-button-disabled-container-color: var();
+  --md-filled-button-disabled-container-elevation: var();
+  --md-filled-button-disabled-container-opacity: var();
+  --md-filled-button-disabled-label-text-color: var();
+  --md-filled-button-disabled-label-text-opacity: var();
+  --md-filled-button-focus-container-elevation: var();
+  --md-filled-button-focus-label-text-color: var();
+  --md-filled-button-hover-container-elevation: var();
+  --md-filled-button-hover-icon-color: var();
+  --md-filled-button-hover-label-text-color: var();
+  --md-filled-button-hover-state-layer-color: var();
+  --md-filled-button-hover-state-layer-opacity: var();
+  --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
+  --md-filled-button-label-text-font: var(--md-sys-typescale-label-medium-font);
+  --md-filled-button-label-text-line-height: var(
+    --md-sys-typescale-label-medium-line-height
+  );
+  --md-filled-button-label-text-size: var(--md-sys-typescale-label-medium-size);
+  --md-filled-button-label-text-weight: var(
+    --md-sys-typescale-label-medium-weight
+  );
+  --md-filled-button-pressed-container-elevation: var();
+  --md-filled-button-pressed-label-text-color: var();
+  --md-filled-button-pressed-state-layer-color: var();
+  --md-filled-button-pressed-state-layer-opacity: var();
+}
 
+a {
+  text-decoration-line: none;
+  color: var(--md-sys-color-primary);
+}
 
-
-
-
-
-
-  
-
+a:hover {
+  transform: scale(1.1);
+  transition: 0.7s all;
+  opacity: 0.8;
+}

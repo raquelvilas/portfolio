@@ -32,6 +32,22 @@ strong {
   flex: 1;
 }
 
+.about-me__img:hover {
+  animation: myAnimation 0.7s;
+}
+
+@keyframes myAnimation {
+  25% {
+    transform: scale(1, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 1.2);
+  }
+  75% {
+    transform: scale(0.9, 1);
+  }
+}
+
 .about-me__text {
   order: 1;
   align-self: flex-start;
