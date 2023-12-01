@@ -12,6 +12,7 @@ strong {
   align-items: flex-start; /*vertical alignment */
   flex-flow: row wrap;
   box-sizing: border-box;
+  padding-top: 78px;
 }
 
 .about-me {

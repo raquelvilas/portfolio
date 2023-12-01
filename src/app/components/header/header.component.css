@@ -4,6 +4,8 @@
   justify-content: center;
   background-color: var(--md-sys-color-surface);
   width: 100%;
+  position: fixed;
+  top: 0 px;
 }
 
 /* Menu */
