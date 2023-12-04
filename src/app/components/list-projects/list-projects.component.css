@@ -12,7 +12,6 @@ strong {
   align-items: flex-start; /*vertical alignment */
   flex-flow: row wrap;
   box-sizing: border-box;
-  padding-top: 78px;
 }
 
 .about-me {
@@ -37,18 +36,6 @@ strong {
   animation: myAnimation 0.7s;
 }
 
-@keyframes myAnimation {
-  25% {
-    transform: scale(1, 1.1);
-  }
-  50% {
-    transform: scale(1.1, 1.2);
-  }
-  75% {
-    transform: scale(0.9, 1);
-  }
-}
-
 .about-me__text {
   order: 1;
   align-self: flex-start;
@@ -69,7 +56,7 @@ strong {
     width: auto;
     margin-left: var(--app-spacing-vertical-small);
     margin-right: var(--app-spacing-vertical-small);
-    padding-top: var(--app-spacing-horizontal-small);
+    padding-top: 132px;
     margin-bottom: var(--app-spacing-horizontal-small);
     flex-direction: column;
     justify-content: flex-start;
@@ -116,7 +103,10 @@ strong {
 @media screen and (min-width: 600px) and (max-width: 904px) {
   .projects {
     width: 100%;
-    padding: var(--app-spacing-full-small);
+    padding-top: 132px;
+    padding-bottom: var(--app-spacing-horizontal-small);
+    padding-left: var(--app-spacing-vertical-small);
+    padding-right: var(--app-spacing-vertical-small);
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
@@ -153,7 +143,7 @@ strong {
     margin-left: 3%;
     margin-right: 3%;
     width: 94%;
-    padding-top: var(--app-spacing-horizontal-huge);
+    padding-top: 158px;
     margin-bottom: var(--app-spacing-horizontal-huge);
     justify-content: space-between;
   }
@@ -193,7 +183,7 @@ strong {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: var(--app-spacing-horizontal-huge);
+    padding-top: 158px;
     margin-bottom: var(--app-spacing-horizontal-huge);
   }
 
