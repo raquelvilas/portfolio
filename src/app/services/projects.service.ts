@@ -25,4 +25,10 @@ export class ProjectsService {
       })
     );
   }
+
+  changeFavorite(project: Project): Observable<Project> {
+    project.Project_favorite = !project.Project_favorite;
+    const url = `http://localhost:3000/detail-project/${project.Project_id}`;
+    return this.http.put<Project>(url, project);
+  }
 }
