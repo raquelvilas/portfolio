@@ -51,8 +51,8 @@
 .card__footer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -92,6 +92,17 @@
   font-weight: var(--md-sys-typescale-body-small-weight);
 }
 
+.material-symbols-sharp {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 40;
+  align-self: center;
+}
+
+.material-symbols-sharp-filled {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 200, "opsz" 40;
+  align-self: center;
+  color: var(--md-ref-palette-primary50);
+}
+
 /* Responsive layouts */
 
 /* Extra-small */
@@ -115,14 +126,14 @@
     font-weight: var(--md-sys-typescale-body-small-weight);
   }
 
-  .card__footer {
-    justify-content: center;
+  .material-symbols-sharp {
+    margin-bottom: var(--app-spacing-horizontal-small);
+    margin-left: var(--app-spacing-vertical-small);
   }
 
   md-filled-button {
     width: 100%;
     margin-bottom: var(--app-spacing-horizontal-small);
-    margin-left: var(--app-spacing-vertical-small);
     margin-right: var(--app-spacing-vertical-small);
   }
 }
@@ -148,10 +159,14 @@
     font-weight: var(--md-sys-typescale-body-small-weight);
   }
 
+  .material-symbols-sharp {
+    margin-bottom: var(--app-spacing-horizontal-small);
+    margin-left: var(--app-spacing-vertical-small);
+  }
+
   md-filled-button {
     width: auto;
     margin-bottom: var(--app-spacing-horizontal-small);
-    margin-left: var(--app-spacing-vertical-small);
     margin-right: var(--app-spacing-vertical-small);
   }
 }
@@ -177,11 +192,15 @@
     font-weight: var(--md-sys-typescale-body-small-weight);
   }
 
-  md-filled-button {
-    width: auto;
+  .material-symbols-sharp {
     margin-bottom: var(--app-spacing-horizontal-small);
     margin-left: var(--app-spacing-vertical-small);
+  }
+
+  md-filled-button {
+    width: auto;
     margin-right: var(--app-spacing-vertical-small);
+    margin-bottom: var(--app-spacing-horizontal-small);
   }
 }
 
@@ -191,10 +210,14 @@
     min-width: 270px;
   }
 
-  md-filled-button {
-    width: auto;
+  .material-symbols-sharp {
     margin-bottom: var(--app-spacing-horizontal-small);
     margin-left: var(--app-spacing-vertical-small);
+  }
+
+  md-filled-button {
+    width: auto;
     margin-right: var(--app-spacing-vertical-small);
+    margin-bottom: var(--app-spacing-horizontal-small);
   }
 }

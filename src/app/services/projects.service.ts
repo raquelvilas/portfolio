@@ -19,7 +19,7 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.API).pipe(
       map((itens: Project[]) => {
         const selectedItem = itens.find((item: Project) => {
-          return item.id === id;
+          return item.Project_id === id;
         });
         return selectedItem || null;
       })

@@ -3,22 +3,19 @@
 
   <div class="card__body">
     <div class="card__img">
-      <img
-        class="card__img__src"
-        src="{{ project.imageSource }}"
-        alt="{{ project.imageAlt }}"
-      />
+      <img class="card__img__src" src="{{ project.Project_thumbnail }}" />
     </div>
 
     <div class="card__content">
       <ul class="card__content__text">
-        <li>{{ project.title }}</li>
-        <li>{{ project.description }}</li>
+        <li>{{ project.Project_title }}</li>
+        <li>{{ project.Project_short_description }}</li>
       </ul>
     </div>
   </div>
 
   <div class="card__footer">
+    <span class="material-symbols-sharp"> favorite </span>
     <md-filled-button>Explore</md-filled-button>
   </div>
 </div>

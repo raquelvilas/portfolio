@@ -1,8 +1,7 @@
 export interface Project {
-  id: number;
-  imageSource: string;
-  imageAlt: string;
-  title: string;
-  description: string;
-  longDescription?: string;
+  Project_id: number;
+  Project_thumbnail: string;
+  Project_title: string;
+  Project_short_description: string;
+  Detail_header_image?: string;
 }

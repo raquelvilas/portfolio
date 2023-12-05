@@ -12,10 +12,9 @@ export class ProjectCardComponent {
   thereIsUtils: boolean = false;
 
   @Input() project: Project = {
-    id: 0,
-    title: '',
-    description: '',
-    imageSource: '',
-    imageAlt: '',
+    Project_id: 0,
+    Project_title: '',
+    Project_short_description: '',
+    Project_thumbnail: '',
   };
 }
