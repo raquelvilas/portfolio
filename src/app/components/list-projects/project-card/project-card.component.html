@@ -15,7 +15,11 @@
   </div>
 
   <div class="card__footer">
-    <button class="material-symbols-sharp {{ changeFavoriteIcon() }}">
+    <button
+      class="material-symbols-sharp"
+      (click)="updateFavorite()"
+      [ngClass]="favoriteState()"
+    >
       favorite
     </button>
     <md-filled-button>Explore</md-filled-button>

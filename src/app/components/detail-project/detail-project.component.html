@@ -73,4 +73,38 @@
   </section>
 
   <div class="detail__right__spacing"></div>
+
+  <section class="detail__comment">
+    <h5 class="detail__comment__title">Leave a comment</h5>
+    <form class="detail__comment__form">
+      <label for="author"></label>
+      <input
+        type="text"
+        class="input"
+        id="author"
+        name="author"
+        placeholder="Leave here your name"
+        [value]="comment.author"
+      />
+      <label for="email"></label>
+      <input
+        type="email"
+        class="input"
+        id="email"
+        name="email"
+        placeholder="Your email"
+        [value]="comment.email"
+      />
+      <label for="content"></label>
+      <input
+        type="textarea"
+        class="input"
+        id="comment"
+        name="comment"
+        placeholder="Your thoughts and feelings about this project"
+        [value]="comment.content"
+      />
+      <button class="send-comment" (click)="addComment()">Send comment</button>
+    </form>
+  </section>
 </section>

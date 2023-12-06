@@ -22,7 +22,7 @@ export class ProjectCardComponent {
 
   constructor(private service: ProjectsService) {}
 
-  changeFavoriteIcon(): string {
+  favoriteState(): string {
     if (this.project.Project_favorite == false) {
       return 'inactive';
     } else if (this.project.Project_favorite == true) {

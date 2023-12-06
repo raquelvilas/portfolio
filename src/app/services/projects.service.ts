@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, filter, find, map } from 'rxjs';
 import { Project } from '../model/project';
+import { Comment } from '../model/comment';
 
 @Injectable({
   providedIn: 'root',
@@ -28,7 +29,11 @@ export class ProjectsService {
 
   changeFavorite(project: Project): Observable<Project> {
     project.Project_favorite = !project.Project_favorite;
-    const url = `http://localhost:3000/detail-project/${project.Project_id}`;
+    const url = `${this.API}/${project.Project_id}`;
     return this.http.put<Project>(url, project);
+  }
+
+  insertComment(comment: Comment): Observable<Comment> {
+    return this.http.post<Comment>(this.API, comment);
   }
 }
