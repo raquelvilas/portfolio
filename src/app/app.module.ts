@@ -14,6 +14,7 @@ import { ProjectCardComponent } from './components/list-projects/project-card/pr
 import { ListProjectsComponent } from './components/list-projects/list-projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailProjectComponent } from './components/detail-project/detail-project.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailProjectComponent } from './components/detail-project/detail-proje
     RouterModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

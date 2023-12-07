@@ -20,7 +20,7 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.API).pipe(
       map((itens: Project[]) => {
         const selectedItem = itens.find((item: Project) => {
-          return item.Project_id === id;
+          return item.id === id;
         });
         return selectedItem || null;
       })
@@ -29,11 +29,11 @@ export class ProjectsService {
 
   changeFavorite(project: Project): Observable<Project> {
     project.Project_favorite = !project.Project_favorite;
-    const url = `${this.API}/${project.Project_id}`;
+    const url = `${this.API}/${project.id}`;
     return this.http.put<Project>(url, project);
   }
 
   insertComment(comment: Comment): Observable<Comment> {
-    return this.http.post<Comment>(this.API, comment);
+    return this.http.post<Comment>('http://localhost:3000/comments', comment);
   }
 }

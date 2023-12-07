@@ -13,7 +13,7 @@ export class ProjectCardComponent {
   thereIsUtils: boolean = false;
 
   @Input() project: Project = {
-    Project_id: 0,
+    id: 0,
     Project_title: '',
     Project_short_description: '',
     Project_thumbnail: '',

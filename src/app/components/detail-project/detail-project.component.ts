@@ -12,11 +12,12 @@ export class DetailProjectComponent implements OnInit {
   id: string = '';
   activeComment: boolean = false;
 
-  comment: Comment = {
+  comment = {
     author: '',
     email: '',
     content: '',
   };
+
   constructor(
     private activatedRouter: ActivatedRoute,
     private service: ProjectsService,
@@ -36,7 +37,8 @@ export class DetailProjectComponent implements OnInit {
 
   addComment() {
     this.service.insertComment(this.comment).subscribe(() => {
-      this.componentReload;
+      console.log(this.comment);
     });
+    console.log(this.comment);
   }
 }
