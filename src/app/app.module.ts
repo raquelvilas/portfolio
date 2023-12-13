@@ -15,6 +15,7 @@ import { ListProjectsComponent } from './components/list-projects/list-projects.
 import { HttpClientModule } from '@angular/common/http';
 import { DetailProjectComponent } from './components/detail-project/detail-project.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectSectionComponent } from './components/detail-project/project-section/project-section.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     ProjectCardComponent,
     ListProjectsComponent,
     DetailProjectComponent,
+    ProjectSectionComponent,
   ],
   imports: [
     BrowserModule,

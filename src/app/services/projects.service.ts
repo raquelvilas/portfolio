@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, filter, find, map } from 'rxjs';
 import { Project } from '../model/project';
 import { Comment } from '../model/comment';
+import { Section } from '../model/section';
 
 @Injectable({
   providedIn: 'root',
@@ -16,15 +17,13 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.API);
   }
 
-  searchById(id: number): Observable<Project | null> {
-    return this.http.get<Project[]>(this.API).pipe(
-      map((itens: Project[]) => {
-        const selectedItem = itens.find((item: Project) => {
-          return item.id === id;
-        });
-        return selectedItem || null;
-      })
-    );
+  loadSections(ProjectId: number): Observable<Section[]> {
+    return this.http.get<Section[]>(`${this.API}/${ProjectId}`);
+  }
+
+  searchById(id: number): Observable<Project> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Project>(url);
   }
 
   changeFavorite(project: Project): Observable<Project> {

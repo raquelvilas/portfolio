@@ -18,6 +18,7 @@ export class ProjectCardComponent {
     Project_short_description: '',
     Project_thumbnail: '',
     Project_favorite: true,
+    Sections: [],
   };
 
   constructor(private service: ProjectsService) {}

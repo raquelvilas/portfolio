@@ -78,10 +78,10 @@
 }
 
 .card__content__text li:nth-child(1) {
-  font-family: var(--md-sys-typescale-display-small-font);
-  line-height: var(--md-sys-typescale-display-small-line-height);
-  font-size: var(--md-sys-typescale-display-small-size);
-  font-weight: var(--md-sys-typescale-display-small-weight);
+  font-family: var(--md-sys-typescale-headline-medium-font);
+  line-height: var(--md-sys-typescale-headline-medium-line-height);
+  font-size: var(--md-sys-typescale-headline-medium-size);
+  font-weight: var(--md-sys-typescale-headline-medium-weight);
   margin-bottom: var(--app-spacing-horizontal-micro);
 }
 

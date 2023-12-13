@@ -42,10 +42,10 @@ strong {
   flex: 3;
   padding: var(--app-spacing-full-small);
   border-radius: var(--app-border-small-radius);
-  font-family: var(--md-sys-typescale-body-medium-font);
-  line-height: var(--md-sys-typescale-body-medium-line-height);
-  font-size: var(--md-sys-typescale-body-medium-size);
-  font-weight: var(--md-sys-typescale-body-medium-weight);
+  font-family: var(--md-sys-typescale-body-small-font);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--md-sys-typescale-body-small-weight);
 }
 
 /* Responsive layouts */

@@ -1,3 +1,5 @@
+import { Section } from './section';
+
 export interface Project {
   id: number;
   Project_thumbnail: string;
@@ -5,4 +7,5 @@ export interface Project {
   Project_short_description: string;
   Project_favorite: boolean;
   Detail_header_image?: string;
+  Sections: Section[];
 }

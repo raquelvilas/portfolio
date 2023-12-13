@@ -1,0 +1,25 @@
+.section__outline {
+  font-family: var(--md-sys-typescale-headline-small-font);
+  line-height: var(--md-sys-typescale-headline-small-line-height);
+  font-size: var(--md-sys-typescale-headline-small-size);
+  font-weight: var(--md-sys-typescale-headline-small-weight);
+  color: var(--md-sys-color-outline);
+  margin-bottom: var(--app-spacing-horizontal-micro);
+}
+
+.section__headline {
+  font-family: var(--md-sys-typescale-display-small-font);
+  line-height: var(--md-sys-typescale-display-small-line-height);
+  font-size: var(--md-sys-typescale-display-small-size);
+  font-weight: var(--md-sys-typescale-display-small-weight);
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--app-spacing-horizontal-large);
+}
+
+.section__body {
+  font-family: var(--md-sys-typescale-body-small-font);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--md-sys-typescale-body-small-weight);
+  color: var(--md-sys-color-on-surface);
+}
