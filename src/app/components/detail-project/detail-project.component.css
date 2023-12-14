@@ -67,13 +67,16 @@
   margin-bottom: var(--app-spacing-horizontal-large);
 }
 
+.detail__comment {
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
 .detail__comment__form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: var(--app-spacing-horizontal-micro);
-  margin-bottom: 200px;
 }
 
 /* Containers itens children*/
@@ -98,7 +101,12 @@
   font-weight: var(--md-sys-typescale-headline-small-weight);
 }
 
-.input {
+.detail__comment__form__field {
+  margin-bottom: var(--app-spacing-horizontal-large);
+  width: 100%;
+}
+
+input {
   height: 64px;
   width: 100%;
   position: relative;
@@ -107,15 +115,34 @@
   line-height: var(--md-sys-typescale-body-small-line-height);
   font-size: var(--md-sys-typescale-body-small-size);
   font-weight: var(--md-sys-typescale-body-small-weight);
-  padding: 16px;
-  margin-bottom: 24px;
   border-radius: var(--app-border-small-radius);
   border: 0;
+  background-color: var(--md-sys-color-surface-container);
+  cursor: pointer;
+  margin-bottom: var(--app-spacing-horizontal-nano);
+  margin-top: var(--app-spacing-horizontal-micro);
+}
+
+input:focus {
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid var(--md-sys-color-primary);
+}
+
+label {
+  font-family: var(--md-sys-typescale-body-small-font);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--md-sys-typescale-body-small-weight);
 }
 
 input[type="textarea"] {
-  height: 400px;
+  height: 240px;
   align-self: flex-start;
+  resize: vertical;
+}
+
+input[type="textarea"]:focus {
   overflow: scroll;
   scroll-behavior: smooth;
   resize: vertical;
@@ -125,10 +152,19 @@ input::placeholder {
   position: absolute;
   top: 16px;
   left: 16px;
+  white-space: pre-wrap;
 }
 
 input:focus::placeholder {
   color: transparent;
+}
+
+.input__error {
+  color: var(--md-sys-color-error);
+  font-family: var(--md-sys-typescale-body-small-font);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--md-sys-typescale-body-small-weight);
 }
 
 md-outlined-button {

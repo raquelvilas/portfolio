@@ -157,29 +157,29 @@
     --md-ref-typeface-weight-medium
   );
   --md-sys-typescale-label-large-font: var(--md-ref-typeface-brand);
-  --md-sys-typescale-label-large-line-height: 3rem;
-  --md-sys-typescale-label-large-size: 2.37rem;
+  --md-sys-typescale-label-large-line-height: 2.37rem;
+  --md-sys-typescale-label-large-size: 1.77rem;
   --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-bold);
   --md-sys-typescale-label-large-weight-prominent: var(
     --md-ref-typeface-weight-medium
   );
   --md-sys-typescale-label-medium-font: var(--md-ref-typeface-brand);
-  --md-sys-typescale-label-medium-line-height: 2.37rem;
-  --md-sys-typescale-label-medium-size: 1.77rem;
+  --md-sys-typescale-label-medium-line-height: 1.8rem;
+  --md-sys-typescale-label-medium-size: 1.33rem;
   --md-sys-typescale-label-medium-weight: var(--md-ref-typeface-weight-bold);
   --md-sys-typescale-label-medium-weight-prominent: var(
     --md-ref-typeface-weight-medium
   );
   --md-sys-typescale-label-small-font: var(--md-ref-typeface-brand);
-  --md-sys-typescale-label-small-line-height: 1.8rem;
-  --md-sys-typescale-label-small-size: 1.33rem;
+  --md-sys-typescale-label-small-line-height: 1.4rem;
+  --md-sys-typescale-label-small-size: 1rem;
   --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
 }
 
 /* Component tokens */
 md-outlined-button {
   --md-outlined-button-container-shape: var(--app-border-standard-radius);
-  --md-outlined-button-container-height: 64px;
+  --md-outlined-button-container-height: 56px;
   --md-outlined-button-label-text-color: var(--md-sys-color-primary);
   --md-outlined-button-label-text-font: var(
     --md-sys-typescale-label-medium-font
@@ -208,7 +208,7 @@ md-outlined-button {
 md-filled-button {
   --md-filled-button-container-color: var(--md-sys-color-primary);
   --md-filled-button-container-elevation: var();
-  --md-filled-button-container-height: 64px;
+  --md-filled-button-container-height: 56px;
   --md-filled-button-container-shadow-color: var();
   --md-filled-button-container-shape: var(--app-border-standard-radius);
   --md-filled-button-disabled-container-color: var();

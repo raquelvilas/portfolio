@@ -29,35 +29,102 @@
 
   <section class="detail__comment">
     <h5 class="detail__comment__title">Leave a comment</h5>
-    <form class="detail__comment__form">
-      <label for="author">Autor</label>
-      <input
-        type="text"
-        class="input"
-        id="author"
-        name="author"
-        placeholder="Leave here your name"
-        [value]="comment.author"
-      />
-      <label for="email">Email</label>
-      <input
-        type="email"
-        class="input"
-        id="email"
-        name="email"
-        placeholder="Leave your email"
-        [value]="comment.email"
-      />
-      <label for="content">Mensagem</label>
-      <input
-        type="textarea"
-        class="input"
-        id="comment"
-        name="comment"
-        placeholder="Leave here your thoughts and feelings about this project"
-        [value]="comment.content"
-      />
-      <md-outlined-button class="send-comment" (click)="addComment()"
+    <form class="detail__comment__form" #f="ngForm">
+      <div class="detail__comment__form__field">
+        <label for="author">Author</label>
+        <input
+          ngModel
+          required
+          minlength="3"
+          type="text"
+          class="input"
+          id="author"
+          name="author"
+          placeholder="Leave here your name"
+          [(ngModel)]="comment.author"
+        />
+
+        <div
+          *ngIf="
+            (f.controls['author']?.invalid && f.controls['author']?.touched) ||
+            f.controls['author']?.dirty
+          "
+        >
+          <span
+            class="input__error"
+            *ngIf="f.controls['author']?.errors?.['required']"
+            >Author identification is needed.</span
+          >
+          <span
+            class="input__error"
+            *ngIf="f.controls['author']?.errors?.['minlength']"
+            >The author must have at least 3 characters.</span
+          >
+        </div>
+      </div>
+
+      <div class="detail__comment__form__field">
+        <label for="email">Email</label>
+        <input
+          ngModel
+          email
+          minlength="4"
+          type="email"
+          class="input"
+          id="email"
+          name="email"
+          placeholder="Leave your email"
+          [(ngModel)]="comment.email"
+        />
+
+        <div
+          *ngIf="
+            (f.controls['email']?.invalid && f.controls['email']?.touched) ||
+            f.controls['email']?.dirty
+          "
+        >
+          <span
+            class="input__error"
+            *ngIf="f.controls['email']?.errors?.['email']"
+            >Please follow this pattern: example@domain.com.</span
+          >
+        </div>
+      </div>
+
+      <div class="detail__comment__form__field">
+        <label for="content">Comment</label>
+        <input
+          ngModel
+          required
+          minlength="4"
+          type="textarea"
+          class="input"
+          id="comment"
+          name="comment"
+          placeholder="Leave here your thoughts and feelings about this project"
+          [(ngModel)]="comment.content"
+        />
+        <div
+          *ngIf="
+            (f.controls['comment']?.invalid &&
+              f.controls['comment']?.touched) ||
+            f.controls['comment']?.dirty
+          "
+        >
+          <span
+            class="input__error"
+            *ngIf="f.controls['comment']?.errors?.['required']"
+            >The comment need to be described.</span
+          >
+          <span
+            class="input__error"
+            *ngIf="f.controls['comment']?.errors?.['minlength']"
+            >The comment must have at least 4 characters.</span
+          >
+        </div>
+      </div>
+
+      <md-outlined-button class="send-comment" (ngSubmit)="addComment(f)"
         >Send comment</md-outlined-button
       >
     </form>

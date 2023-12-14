@@ -39,7 +39,7 @@ li {
 }
 
 .header__menu__linkedin-logo svg {
-  height: 64px;
+  height: 56px;
   width: auto;
   cursor: pointer;
   color: var(--md-sys-color-on-surface);
@@ -61,6 +61,7 @@ li {
   transform: scale(1.1);
   transition: 0.7s all;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 /* Responsive layouts */

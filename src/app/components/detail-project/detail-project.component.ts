@@ -4,6 +4,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 import { Comment } from 'src/app/model/comment';
 import { Project } from 'src/app/model/project';
 import { Section } from 'src/app/model/section';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-detail-project',
@@ -20,7 +21,6 @@ export class DetailProjectComponent implements OnInit {
     email: '',
     content: '',
     project_id: 0,
-    id: 0,
   };
 
   project: Project = {
@@ -52,18 +52,19 @@ export class DetailProjectComponent implements OnInit {
     this.router.navigate([this.router.url]);
   }
 
-  addComment() {
-    this.comment.project_id = this.capturedId;
-    this.service.insertComment(this.comment).subscribe(() => {
-      console.log(this.comment);
-    });
-    console.log(this.comment);
+  addComment(form: NgForm) {
+    console.log('oioio');
+    if (form.valid) {
+      this.comment.project_id = this.capturedId;
+      this.service.insertComment(this.comment).subscribe((retorno) => {
+        console.log(retorno);
+      });
+    }
   }
 
   loadProject(): void {
     this.service.searchById(this.capturedId).subscribe((searchedProject) => {
       this.project = searchedProject;
-      console.log(this.project.Sections);
     });
   }
 
